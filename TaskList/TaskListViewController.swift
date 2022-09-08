@@ -8,7 +8,7 @@
 import UIKit
 
 class TaskListViewController: UITableViewController {
-    private let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private let viewContext = StoreManager.shared.persistentContainer.viewContext
     private let cellId = "cell"
     private var taskList: [Task] = []
 
@@ -102,6 +102,12 @@ extension TaskListViewController {
         content.text = task.title
         cell.contentConfiguration = content
         return cell
+    }
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
     }
 }
 
