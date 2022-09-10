@@ -11,10 +11,10 @@ import Foundation
 class StoreManager {
     static let shared = StoreManager()
     
-    private init() {}
+   
     // MARK: - Core Data stack
 
-     var persistentContainer: NSPersistentContainer = {
+    private var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "TaskList")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -24,7 +24,41 @@ class StoreManager {
         })
         return container
     }()
+    
+    private let viewContext: NSManagedObjectContext
+    private init() {
+        viewContext =  persistentContainer.viewContext
+    }
 
+    
+    // MARK: - CRUD
+    func create(_ taskName: String, complition: (Task) -> Void) {
+        let task = Task(context: viewContext)
+        task.title = taskName
+        complition(task)
+        saveContext()
+    }
+    
+    func fetchData(complition: (Result<[Task], Error>) -> Void ) {
+        let fetchRequest = Task.fetchRequest()
+        
+        do {
+            let task = try viewContext.fetch(fetchRequest)
+            complition(.success(task))
+        } catch let error {
+            complition(.failure(error))
+        }
+    }
+    
+    func update(_ task: Task, newName: String) {
+        task.title = newName
+        saveContext()
+    }
+    
+    func delete(_ task: Task) {
+        viewContext.delete(task)
+        saveContext()
+    }
     // MARK: - Core Data Saving support
 
     func saveContext () {

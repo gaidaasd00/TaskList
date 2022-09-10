@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC10FD3428CA498800B77401 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC10FD3328CA498800B77401 /* StoreManager.swift */; };
+		CC7978C828CCEAD400AE11D1 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7978C728CCEAD400AE11D1 /* AlertController.swift */; };
 		CC7CA2A028C90C5600A0A4C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA29F28C90C5600A0A4C8 /* AppDelegate.swift */; };
 		CC7CA2A228C90C5600A0A4C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA2A128C90C5600A0A4C8 /* SceneDelegate.swift */; };
 		CC7CA2A428C90C5600A0A4C8 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7CA2A328C90C5600A0A4C8 /* TaskListViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		CC10FD3328CA498800B77401 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		CC7978C728CCEAD400AE11D1 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		CC7CA29C28C90C5600A0A4C8 /* TaskList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7CA29F28C90C5600A0A4C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC7CA2A128C90C5600A0A4C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				CC7CA29F28C90C5600A0A4C8 /* AppDelegate.swift */,
 				CC7CA2A128C90C5600A0A4C8 /* SceneDelegate.swift */,
 				CC7CA2A328C90C5600A0A4C8 /* TaskListViewController.swift */,
+				CC7978C728CCEAD400AE11D1 /* AlertController.swift */,
 				CC10FD3328CA498800B77401 /* StoreManager.swift */,
 				CC7CA2AB28C90C5900A0A4C8 /* Assets.xcassets */,
 				CC7CA2AD28C90C5900A0A4C8 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				CC7CA2A428C90C5600A0A4C8 /* TaskListViewController.swift in Sources */,
 				CC10FD3428CA498800B77401 /* StoreManager.swift in Sources */,
 				CC7CA2A028C90C5600A0A4C8 /* AppDelegate.swift in Sources */,
+				CC7978C828CCEAD400AE11D1 /* AlertController.swift in Sources */,
 				CC7CA2A228C90C5600A0A4C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
